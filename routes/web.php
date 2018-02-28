@@ -10,11 +10,13 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::group(['prefix' => 'main'], function(){
+    Route::get('/', function () {
+        return view('blog.index');
+    })->name('blog.index');
+    
+    Route::get('post/{id}', function () {
+        return view('blog.post');
+    })->name('blog.post');
+});
 
-Route::get('/', function () {
-    return view('blog.index');
-})->name('blog.index');
-
-Route::get('post/{id}', function () {
-    return view('blog.post');
-})->name('blog.post');
