@@ -2,7 +2,7 @@
 @section('content')
 <div class="row">
     <div class="row-md-12">
-       <p class="blog">A blog post here</p>
+       <p class="blog"><a href="{{ route('blog.post', ['id' => 1]) }}">>A blog post here</a</p>
 </div>
 </div>
 
