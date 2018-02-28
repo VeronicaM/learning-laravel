@@ -2,7 +2,10 @@
 @section('content')
 <div class="row">
     <div class="row-md-12">
-       <p class="blog">A blog post data here</p>
+       <p class="blog">{{$post['title']}}</p>
+       <div class="content">
+           {{$post['content']}}
+       </div>
 </div>
 </div>
 

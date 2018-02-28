@@ -15,8 +15,13 @@ Route::group(['prefix' => 'main'], function(){
         return view('blog.index');
     })->name('blog.index');
     
-    Route::get('post/{id}', function () {
-        return view('blog.post');
+    Route::get('post/{id}', function ($id) {
+        if($id == 1){
+            $post = ['title' => 'Learning Laravel', 'content' => 'This blog post will get you right on track with Laravel'];
+        }else{
+            $post = ['title' => 'Something else', 'content' => 'Some other content'];
+        }
+        return view('blog.post', ['post' => $post]);
     })->name('blog.post');
 });
 
