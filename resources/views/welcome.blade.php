@@ -13,6 +13,9 @@
         @for($i=0; $i < 5; $i++)
             <p> {{$i + 1}}</p>
         @endfor
+        <p>XSS</p>
+        {{"<script>alert('Hello');</script>"}}
+        {!!"<script>alert('Hello');</script>"!!}
     </div>
 </div>
 
